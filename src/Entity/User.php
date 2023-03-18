@@ -9,7 +9,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity()
- * @ORM\Table(name="users")
+ * @ORM\Table(name="user")
  * @method string getUserIdentifier()
  */
 class User implements UserInterface, Serializable

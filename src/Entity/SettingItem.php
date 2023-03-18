@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity()
- * @ORM\Table(name="settings")
+ * @ORM\Table(name="setting")
  */
 class SettingItem
 {
