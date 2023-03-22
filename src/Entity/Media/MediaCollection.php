@@ -12,9 +12,9 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity(repositoryClass=MediaCollectionRepository::class)
  * @ORM\InheritanceType("SINGLE_TABLE")
  * @ORM\DiscriminatorColumn(name="discr", type="string")
- * @ORM\DiscriminatorMap({"media_collection" = "MediaCollection", "gallery" = "Gallery", "smart_gallery" = "SmartGallery"})
+ * @ORM\DiscriminatorMap({"gallery" = "Gallery", "smart_gallery" = "SmartGallery"})
  */
-class MediaCollection
+abstract class MediaCollection
 {
     /**
      * @ORM\Id
@@ -59,9 +59,15 @@ class MediaCollection
      */
     protected $classification;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $creationDate;
+
     public function __construct()
     {
         $this->users = new ArrayCollection();
+        $this->creationDate = new \DateTime();
     }
 
     public function getId(): ?int
@@ -161,6 +167,18 @@ class MediaCollection
     public function setClassification(int $classification): self
     {
         $this->classification = $classification;
+
+        return $this;
+    }
+
+    public function getCreationDate(): ?\DateTimeInterface
+    {
+        return $this->creationDate;
+    }
+
+    public function setCreationDate(\DateTimeInterface $creationDate): self
+    {
+        $this->creationDate = $creationDate;
 
         return $this;
     }
