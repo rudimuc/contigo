@@ -6,7 +6,11 @@
         "@symfony/stimulus-bridge": "^3.2.0",
         "@symfony/webpack-encore": "^4.0.0",
         "core-js": "^3.23.0",
+        "jquery": "^3.6.4",
         "regenerator-runtime": "^0.13.9",
+        "sass": "^1.60.0",
+        "sass-loader": "^13.2.1",
+        "stimulus": "^2.0.0",
         "webpack": "^5.74.0",
         "webpack-cli": "^4.10.0",
         "webpack-notifier": "^1.15.0"
@@ -18,5 +22,14 @@
         "dev": "encore dev",
         "watch": "encore dev --watch",
         "build": "encore production --progress"
+    },
+    "dependencies": {
+        "@babel/polyfill": "^7.12.1",
+        "@popperjs/core": "^2.11.5",
+        "bootstrap": "^5.2.3",
+        "chart.js": "^2.9.4",
+        "feather-icons": "^4.29.0",
+        "flatpickr": "^4.6.13",
+        "simplebar": "^5.3.8"
     }
 }
