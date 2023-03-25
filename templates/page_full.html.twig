@@ -20,18 +20,7 @@
                     <a class="sidebar-brand" href="{{ url("app_default") }}">
                         <span class="align-middle">Contigo</span>
                     </a>
-
-                    <ul class="sidebar-nav">
-                        <li class="sidebar-header">
-                            Pages
-                        </li>
-
-                        <li class="sidebar-item active">
-                            <a class="sidebar-link" href="{{ url("app_default") }}">
-                                <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Startpage</span>
-                            </a>
-                        </li>
-                    </ul>
+                    {{ knp_menu_render('main', {'allow_safe_labels': true, 'currentClass' : 'active'}) }}
                 </div>
             </nav>
 

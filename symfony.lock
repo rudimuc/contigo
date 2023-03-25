@@ -52,6 +52,9 @@
             "migrations/.gitignore"
         ]
     },
+    "knplabs/knp-menu-bundle": {
+        "version": "v3.2.0"
+    },
     "nelmio/cors-bundle": {
         "version": "2.2",
         "recipe": {
