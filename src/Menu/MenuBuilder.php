@@ -23,7 +23,7 @@ class MenuBuilder
         $menu = $this->factory->createItem('root');
         $menu->setChildrenAttribute("class", "sidebar-nav");
 
-        $menu->addChild('Home', ['route' => 'app_default', "label" => "Home"])->setAttribute('icon', 'home');
+        $menu->addChild('menu.MenuStartpage', ['route' => 'app_default'])->setAttribute('icon', 'home');
 
         return $menu;
     }
