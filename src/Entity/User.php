@@ -9,7 +9,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity()
- * @ORM\Table(name="user")
+ * @ORM\Table(name="`user`")
  * @method string getUserIdentifier()
  */
 class User implements UserInterface, Serializable
@@ -20,7 +20,6 @@ class User implements UserInterface, Serializable
      */
     public function __construct()
     {
-        $this->isactive = true;
         $this->roles = new ArrayCollection();
     }
 
@@ -165,8 +164,7 @@ class User implements UserInterface, Serializable
         return serialize(array(
             $this->id,
             $this->username,
-            $this->password,
-            $this->isactive
+            $this->password
         ));
     }
 
@@ -175,8 +173,7 @@ class User implements UserInterface, Serializable
         list (
             $this->id,
             $this->username,
-            $this->password,
-            $this->isactive
+            $this->password
             ) = unserialize($data, array('allowed_classes' => false));
     }
 
