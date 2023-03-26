@@ -12,6 +12,13 @@ The first version will be provided until summer 2023 and will include
 - intelligent albums (search funtion with logical operators)
 - user management
 
+# dependencies
+- AdminKit (Basic Layout)
+- Leaflet (Maps)
+
+
+
+
 # about the name
 
 Maybe you are asking yourself: `What does that name mean?`
