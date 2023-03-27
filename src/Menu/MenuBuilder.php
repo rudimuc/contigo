@@ -24,6 +24,7 @@ class MenuBuilder
         $menu->setChildrenAttribute("class", "sidebar-nav");
 
         $menu->addChild('menu.MenuStartpage', ['route' => 'app_default'])->setAttribute('icon', 'home');
+        $menu->addChild('Logout', ['route' => 'app_logout'])->setAttribute('icon', 'log-out');
 
         return $menu;
     }

@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+<main class="d-flex w-100 h-100">
+    <div class="container d-flex flex-column">
+        <div class="row vh-100">
+            <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
+                <div class="d-table-cell align-middle">
+                    <div class="text-center mt-4">
+                        <h1 class="h2">{{ "LoginSignInTitle"|trans }}</h1>
+                        <p class="lead">
+                            {{ "LoginSignInMessage"|trans }}
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="m-sm-4">
+                                <form action="{{ path('app_login') }}" method="post">
+                                    <div class="mb-3">
+                                        <label class="form-label">{{ "Username"|trans }}</label>
+                                        <input class="form-control form-control-lg" type="text" id="username" name="_username" placeholder="{{ "Username"|trans }}" value="{{ last_username }}" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">{{ "Password"|trans }}</label>
+                                        <input class="form-control form-control-lg" type="password" id="password" name="_password" placeholder="{{ "Password"|trans }}" />
+                                    </div>
+                                    {% if error is not null %}
+                                        <div class="alert alert-danger alert-dismissible" role="alert">
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                            <div class="alert-message">
+                                                {{ "LoginFailed"|trans }}
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                    <!--<div>
+                                        <label class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="remember-me" name="_remember_me" checked>
+                                            <span class="form-check-label">
+													{{ "RememberMeNextTime"|trans }}
+												</span>
+                                        </label>
+                                    </div>-->
+                                    <div class="text-center mt-3">
+                                        <button id="loginbutton" class="btn btn-lg btn-primary" type="submit">Login</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+{% endblock %}

@@ -2,5 +2,14 @@ HelloMessage: Hallo {name}, willkommen zurück!
 Language: Sprache
 Languages: Sprachen
 Search: Suchen
+Login: Anmelden
+LoginFailed: Anmeldung fehlgeschlagen. Bitte überprüfe deine Eingaben.
+LoginSignInTitle: Willkommen bei Contigo
+LoginSignInMessage: Bitte melde dich an, um fortzufahren
+Logout: Abmelden
+Username: Benutzername
+Password: Passwort
+RememberMeNextTime: Angemeldet bleiben
+
 menu:
     MenuStartpage: Startseite

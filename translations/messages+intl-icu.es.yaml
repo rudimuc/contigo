@@ -1,6 +1,15 @@
-HelloMessage: Hola {name}! Bienvenidos!
+HelloMessage: "Hola {name}! Bienvenidos!"
 Language: Idioma
 Languages: Idiomas
 Search: Buscar
+Login: Iniciar sesión
+LoginFailed: Inicio de sesión fallido. Por favor, compruebe sus datos.
+LoginSignInTitle: Bienvenido a Contigo
+LoginSignInMessage: Por favor, inicie sesión para continuar
+Logout: Cerrar sesión
+Username: Nombre de usuario
+Password: Contraseña
+RememberMeNextTime: Recordarme la próxima vez
+
 menu:
     MenuStartpage: Página de inicio

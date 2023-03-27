@@ -2,5 +2,14 @@ HelloMessage: Hello {name}, welcome back!
 Language: Language
 Languages: Languages
 Search: Suchen
+Login: Login
+LoginFailed: Login failed. Please check your input.
+LoginSignInTitle: Welcome to Contigo
+LoginSignInMessage: Sign in to your account to continue
+Logout: Logout
+Username: Username
+Password: Password
+RememberMeNextTime: Remember me next time
+
 menu:
     MenuStartpage: Home
