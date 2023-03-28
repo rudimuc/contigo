@@ -84,6 +84,13 @@
         }
     },
     "require-dev": {
+        "behat/behat": "^3.12",
+        "behat/mink": "^1.10",
+        "dvdoug/behat-code-coverage": "^5",
+        "friends-of-behat/mink-browserkit-driver": "^1.6",
+        "friends-of-behat/mink-extension": "^2.7",
+        "friends-of-behat/symfony-extension": "^2.4",
+        "phpunit/php-code-coverage": "^9",
         "phpunit/phpunit": "^9.6",
         "symfony/browser-kit": "5.4.*",
         "symfony/css-selector": "5.4.*",
