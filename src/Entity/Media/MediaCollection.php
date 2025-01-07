@@ -47,6 +47,9 @@ abstract class MediaCollection
     #[ORM\ManyToMany(targetEntity: User::class)]
     private Collection $users;
 
+    #[ORM\ManyToOne]
+    private ?MediaObject $preview = null;
+
     public function __construct()
     {
         $this->users = new ArrayCollection();
@@ -151,5 +154,24 @@ abstract class MediaCollection
         $this->users->removeElement($user);
 
         return $this;
+    }
+
+    public function getPreview(): ?MediaObject
+    {
+        return $this->preview;
+    }
+
+    public function setPreview(?MediaObject $preview): static
+    {
+        $this->preview = $preview;
+
+        return $this;
+    }
+
+    public function getPreviewImageId() {
+        if($this->preview === null) {
+            return null;
+        }
+        return $this->preview->getId();
     }
 }
